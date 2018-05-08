@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=PayPACT
+Comment=PayPACT P2P Cryptocurrency
+Comment[fr]=PayPACT, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=PayPACT, eşten eşe kriptografik sanal para birimi
+Exec=PayPACT-qt %u
+Terminal=false
+Type=Application
+Icon=PayPACT128
+MimeType=x-scheme-handler/PayPACT;
+Categories=Office;Finance;

@@ -1,0 +1,26 @@
+# /etc/conf.d/PayPACTd: config file for /etc/init.d/PayPACTd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/PayPACT/PayPACT.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/PayPACTd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/PayPACTd.pid"
+
+# Where to write PayPACTd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/PayPACTd"
+
+# User and group to own PayPACTd process
+#BITCOIND_USER="PayPACT"
+#BITCOIND_GROUP="PayPACT"
+
+# Path to PayPACTd executable
+#BITCOIND_BIN="/usr/bin/PayPACTd"
+
+# Nice value to run PayPACTd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

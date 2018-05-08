@@ -1,0 +1,26 @@
+[Unit]
+Description=PayPACT's distributed currency daemon
+After=network.target
+
+[Service]
+User=PayPACT
+Group=PayPACT
+
+Type=forking
+PIDFile=/var/lib/PayPACTd/PayPACTd.pid
+
+ExecStart=/usr/bin/PayPACTd -daemon -pid=/var/lib/PayPACTd/PayPACTd.pid \
+          -conf=/etc/PayPACT/PayPACT.conf -datadir=/var/lib/PayPACTd
+
+ExecStop=-/usr/bin/PayPACT-cli -conf=/etc/PayPACT/PayPACT.conf \
+         -datadir=/var/lib/PayPACTd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
